@@ -4,8 +4,7 @@ public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
     System.out.print("Enter mark: ");
     int mark = sc.nextInt();
-    System.out.println(classifyMark(mark));
-    sc.close();}
+    System.out.println(classifyMark(mark));}
     static String classifyMark(int mark) {
     if (mark < 0 || mark > 100) {
         return "Invalid mark";
