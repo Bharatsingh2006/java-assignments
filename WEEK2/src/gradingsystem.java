@@ -1,21 +1,19 @@
 import java.util.Scanner;
-public class gradingsystem {
+public class GradingSystem {
 public static void main(String[] args) {
-    Scanner scanner = new Scanner(System.in);
-    System.out.print("Enter your score (0-100): ");
-    int score = scanner.nextInt();
-    String grade;
-    if (score > 100 || score < 0) {
-        grade = "Invalid score";
-    } else if (score == 100 || score >= 80) {
-        grade = "Distinction";
-    } else if (score == 79 || score >= 70) {
-        grade = "Merit";
-    } else if (score == 69 || score >=50) {
-        grade = "Pass";
+    Scanner sc = new Scanner(System.in);
+    System.out.print("Enter mark: ");
+    int mark = sc.nextInt();
+    System.out.println(classifyMark(mark));
+    sc.close();}
+    static String classifyMark(int mark) {
+    if (mark < 0 || mark > 100) {
+        return "Invalid mark";
+    } else if (mark >= 80) {
+        return "Distinction";
+    } else if (mark >= 70) {
+        return "Merit";
+    } else if (mark >= 50) {
+        return "Pass";
     } else {
-        grade = "F";
-    }
-    System.out.println("Your grade is: " + grade);
-}
-}
+        return "Fail";}}}
